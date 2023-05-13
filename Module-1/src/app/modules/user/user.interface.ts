@@ -1,5 +1,5 @@
- // interface
- export interface IUser {
+// interface
+export interface IUser {
     id: number;
     role: 'student';
     password: string;
@@ -15,4 +15,8 @@
     emergencyContactNo: string;
     presentAddress: string;
     permanentAddress: string;
+}
+
+export interface IUserMethods {
+    fullName(): string;
 }
