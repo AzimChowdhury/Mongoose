@@ -21,3 +21,8 @@ export const getUserByIdFromDB = async (payload: number): Promise<IUser | null> 
     const user = await User.findOne({ id: payload },{name:1, email:1,contactNo:1})
     return user;
 }
+
+export const getAdmins = async (payload: number): Promise<IUser | null> => {
+    const user = await User.findOne({ id: payload },{name:1, email:1,contactNo:1})
+    return user; 
+}
