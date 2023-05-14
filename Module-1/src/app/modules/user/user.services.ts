@@ -7,7 +7,7 @@ export const addUserToDB = async (payload: IUser): Promise<IUser> => {
     // User -> class
     // user -> instance
     // save -> built in instance method
-    console.log(user.fullName());
+    // console.log(user.fullName());
     await user.save();
     return user;
 }
@@ -22,7 +22,7 @@ export const getUserByIdFromDB = async (payload: number): Promise<IUser | null> 
     return user;
 }
 
-export const getAdmins = async (payload: number): Promise<IUser | null> => {
-    const user = await User.findOne({ id: payload },{name:1, email:1,contactNo:1})
-    return user; 
+export const getAdmins = async () => {
+    const admins = await User.getAdmins()
+    return admins;
 }
